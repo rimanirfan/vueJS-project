@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue JS</title>
+
+    <script type="text/javascript" src="./vue.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="myApp">
+        <!-- <h1 v-once>{{ title }}</h1>
+        <p>{{ sayHello() }}</p>
+        <a :href="link" >Google</a>
+        <hr>
+        <p v-html="finishedLink"></p>
+        <button @click="increase">Click me</button>
+        <button @click="increaseByStep(2, $event)">Increase by 2 step</button>
+        <p>{{ counter }}</p>
+        <p @mousemove="updateCoordinates">
+            Coordinates: {{ x }} / {{ y }} - <span @mousemove.stop="">DEAD SPOT</span>
+        </p>
+        <input type="text" @keyup.enter="alertMe"> -->
+        <input type="text" v-model="color">
+        <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+        <div class="demo" :class="color"></div>
+        <div class="demo" :class="color"></div>
+
+
+    </div>
+
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditional and Lists Vue</title>
+
+    <script type="text/javascript" src="./vue.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="app">
+        <!-- CONDITIONAL -->
+        <!-- <p v-if="show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, est?</p>
+        <p v-else>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi maxime consectetur expedita accusantium ab nostrum necessitatibus, veritatis possimus quisquam dolores?</p>
+        <template v-if="show">
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit.</p>
+        </template>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button @click="show = !show">Switch</button> -->
+
+        <!-- LISTS & LOOP-->
+        <ul>
+            <li v-for="(ingredient, i) in ingredients" :key="ingredient">
+                {{ ingredient }} ({{ i }})
+            </li>
+        </ul>
+        <button @click="ingredients.push('spices')">Add new</button>
+        <hr>
+        <ul>
+            <li v-for="person in persons">
+                <span v-for="value in person">{{ value + ' '}}</span>
+            </li>
+        </ul>
+        <hr>
+        <span v-for="n in 10">{{ n }}</span>
+    </div>
+    
+    <script type="text/javascript" src="./conditional.js"></script>
+    
+</body>
+</html>
