@@ -22,7 +22,7 @@
         <button @click="show = !show">Switch</button> -->
 
         <!-- LISTS & LOOP-->
-        <ul>
+        <!-- <ul>
             <li v-for="(ingredient, i) in ingredients" :key="ingredient">
                 {{ ingredient }} ({{ i }})
             </li>
@@ -35,8 +35,18 @@
             </li>
         </ul>
         <hr>
-        <span v-for="n in 10">{{ n }}</span>
+        <span v-for="n in 10">{{ n }}</span> -->
 
+        <my-cmp></my-cmp>
+        <hr>
+        <my-cmp></my-cmp>
+
+    </div>
+
+    <div id="app2">
+        <my-cmp></my-cmp>
+        <hr>
+        <my-cmp></my-cmp>
     </div>
     
     <script type="text/javascript" src="./conditional.js"></script>
