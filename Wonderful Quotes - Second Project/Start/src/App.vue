@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <app-header></app-header>
         <app-new-quote @quoteAdded="newQuote"></app-new-quote>
         <app-quote-grid :quotes="quotes" @quoteDeleted="deleteQuote"></app-quote-grid>
         <div class="row">
@@ -14,6 +15,7 @@
 
     import QuoteGrid from './components/QuoteGrid.vue'
     import NewQuote from './components/NewQuote.vue'
+    import Header from './components/Header.vue'
 
     export default {
         data: function() {
@@ -26,7 +28,8 @@
         },
         components: {
             appQuoteGrid: QuoteGrid,
-            appNewQuote: NewQuote
+            appNewQuote: NewQuote,
+            appHeader: Header
         },
         methods: {
             newQuote(quote) {
