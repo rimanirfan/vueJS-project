@@ -10,10 +10,13 @@
 </template>
 
 <script>
-    import {fruitMixin} from './fruitsMixin'
+    import { fruitMixin } from './fruitsMixin'
 
     export default {
-        mixins: [fruitMixin]
+        mixins: [fruitMixin],
+        created() {
+            console.log('inside list created')
+        }
     }
 </script>
 
