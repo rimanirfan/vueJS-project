@@ -26,6 +26,35 @@ const mutations = {
             state.stocks.splice(state.stocks.indexOf(record), 1)
         }
         state.funds += stockPrice * quantity
-
     }
+}
+
+const actions = {
+    sellStock({commit}, order) {
+        commit('SELL_STOCK', order)
+    }
+}
+
+const getters = {
+    stockPortfolio(state, getters) {
+        return state.stocks.map(stock => {
+            const record = getters.stocks.find(element => element.id == stock.id)
+            return {
+                id: stock.id,
+                name: record.name,
+                quantity: stock.quantity,
+                price: record.price
+            }
+        })
+    },
+    funds(state) {
+        return state.funds
+    }
+}
+
+export default {
+    state,
+    mutations,
+    getters,
+    actions
 }
