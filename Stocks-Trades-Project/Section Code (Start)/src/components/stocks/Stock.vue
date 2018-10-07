@@ -45,6 +45,7 @@
                     quantity: this.quantity
                 }
                 console.log(order)
+                this.$dispatch('buyStock', order)
                 this.quantity = null
             }
         }
